@@ -7,10 +7,9 @@
 
     <section>
       <form role="form" submit.delegate="getTrackMeta()">
-        <div>
-          <label for="track">Track</label>
-          <input type="text" value.bind="track" id="track" placeholder="Track">
-        </div>
+        <paper-input-decorator label="Track" floatingLabel>
+          <input is="core-input" value.bind="track">
+        </paper-input-decorator>
         <div>
           <label>Main Artist(s)</label>
           <p repeat.for="artist of trackMeta.mainArtists">${artist}</p>
