@@ -8,11 +8,11 @@
       </div>
       <div>
         <label>Main Artist(s)</label>
-        <p>${trackMeta.mainArtists}</p>
+        <p repeat.for="artist of trackMeta.mainArtists">${artist}</p>
       </div>
       <div>
         <label>Featured Artist(s)</label>
-        <p>${trackMeta.featuredArtists}</p>
+        <p repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</p>
       </div>
       <div>
         <label>Song Title</label>
@@ -20,7 +20,7 @@
       </div>
       <div>
         <label>Song Remix</label>
-        <p>${trackMeta.songRemix}</p>
+        <p repeat.for="songRemix of trackMeta.songRemix">${songRemix}</p>
       </div>
       <button type="submit">Submit</button>
     </form>
