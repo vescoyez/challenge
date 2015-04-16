@@ -1,5 +1,5 @@
 export class TrackMeta{
-  track = `Red Mystery - Jetlands (Ron Flatter & Nick D-Lite Edit)`;
+  track = `Mark Ronson feat. Bruno Mars - Uptown Funk (Radio Edit)`;
 
   get trackMeta(){
     return parseTrack(this.track);
