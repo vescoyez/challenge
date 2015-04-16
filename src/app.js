@@ -1,5 +1,5 @@
 export class TrackMeta{
-  track = `Bill Withers & Grover Washington feat. test1 & test2 - Just the Two of Us (feat. test3)[radio remix]`;
+  track = `Red Mystery - Jetlands (Ron Flatter & Nick D-Lite Edit)`;
 
   get trackMeta(){
     return parseTrack(this.track);
@@ -30,7 +30,7 @@ function parseTrack(track){
       case "feat." :
       case "ft." : res.featuredArtists = res.featuredArtists.concat( spl[++i].trim().split(` & `) ); break;
       case " - " : res.songTitle = spl[++i].trim(); break;
-      default : res.songRemix = res.songRemix.concat( spl[i].trim().split(` & `) );
+      default : res.songRemix = res.songRemix.concat( spl[i].trim() );
     }
   }
   return res;
