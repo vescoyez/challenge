@@ -16,7 +16,7 @@ core-toolbar {
 
 label {
   font-size: 10px;
-  padding: 4px 16px;
+  padding: 6px 16px 4px;
   text-transform: uppercase;
   font-weight: bold;
   color: #BBB;
