@@ -1,0 +1,29 @@
+<template>
+  <section>
+
+    <form role="form" submit.delegate="trackMeta()">
+      <div>
+        <label for="track">Track</label>
+        <input type="text" value.bind="track" id="track" placeholder="Track">
+      </div>
+      <div>
+        <label>Main Artist(s)</label>
+        <p>${mainArtists}</p>
+      </div>
+      <div>
+        <label>Featured Artist(s)</label>
+        <p>${featuredArtists}</p>
+      </div>
+      <div>
+        <label>Song Title</label>
+        <p>${songTitle}</p>
+      </div>
+      <div>
+        <label>Song Remix</label>
+        <p>${songRemix}</p>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+      
+  </section>
+</template>
