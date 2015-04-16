@@ -10,14 +10,14 @@
     <section class="content">
       <form role="form" submit.delegate="getTrackMeta()">
         <div>
-          <label>Main Artist(s)</label>
+          <label>Main Artist${trackMeta.mainArtists[1] ? 's' : ''}</label>
           <ul class="meta-list">
             <li class="meta-list__item" repeat.for="artist of trackMeta.mainArtists">${artist}</li>
             <li class="meta-list__item" if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</li>
           <ul>
         </div>
         <div if.bind="trackMeta.featuredArtists[0]">
-          <label>Featured Artist(s)</label>
+          <label>Featured Artist${trackMeta.featuredArtists[1] ? 's' : ''}</label>
           <ul class="meta-list">
             <li class="meta-list__item" repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</li>
           </ul>
