@@ -1,30 +1,36 @@
 <template>
-  <section>
+  <core-header-panel flex mode="waterfall">
+    
+    <core-toolbar>
+      <div>Challenge</div>
+    </core-toolbar>
 
-    <form role="form" submit.delegate="getTrackMeta()">
-      <div>
-        <label for="track">Track</label>
-        <input type="text" value.bind="track" id="track" placeholder="Track">
-      </div>
-      <div>
-        <label>Main Artist(s)</label>
-        <p repeat.for="artist of trackMeta.mainArtists">${artist}</p>
-        <p if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</p>
-      </div>
-      <div if.bind="trackMeta.featuredArtists[0]">
-        <label>Featured Artist(s)</label>
-        <p repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</p>
-      </div>
-      <div if.bind="trackMeta.songTitle">
-        <label>Song Title</label>
-        <p>${trackMeta.songTitle}</p>
-      </div>
-      <div if.bind="trackMeta.songRemix[0]">
-        <label>Song Remix</label>
-        <p repeat.for="songRemix of trackMeta.songRemix">${songRemix}</p>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-      
-  </section>
+    <section>
+      <form role="form" submit.delegate="getTrackMeta()">
+        <div>
+          <label for="track">Track</label>
+          <input type="text" value.bind="track" id="track" placeholder="Track">
+        </div>
+        <div>
+          <label>Main Artist(s)</label>
+          <p repeat.for="artist of trackMeta.mainArtists">${artist}</p>
+          <p if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</p>
+        </div>
+        <div if.bind="trackMeta.featuredArtists[0]">
+          <label>Featured Artist(s)</label>
+          <p repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</p>
+        </div>
+        <div if.bind="trackMeta.songTitle">
+          <label>Song Title</label>
+          <p>${trackMeta.songTitle}</p>
+        </div>
+        <div if.bind="trackMeta.songRemix[0]">
+          <label>Song Remix</label>
+          <p repeat.for="songRemix of trackMeta.songRemix">${songRemix}</p>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    
+  </core-header-panel>
 </template>
