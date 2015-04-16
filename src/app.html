@@ -9,16 +9,17 @@
       <div>
         <label>Main Artist(s)</label>
         <p repeat.for="artist of trackMeta.mainArtists">${artist}</p>
+        <p if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</p>
       </div>
-      <div>
+      <div if.bind="trackMeta.featuredArtists[0]">
         <label>Featured Artist(s)</label>
         <p repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</p>
       </div>
-      <div>
+      <div if.bind="trackMeta.songTitle">
         <label>Song Title</label>
         <p>${trackMeta.songTitle}</p>
       </div>
-      <div>
+      <div if.bind="trackMeta.songRemix[0]">
         <label>Song Remix</label>
         <p repeat.for="songRemix of trackMeta.songRemix">${songRemix}</p>
       </div>

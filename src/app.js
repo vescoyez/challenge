@@ -13,9 +13,9 @@ export class TrackMeta{
 function parseTrack(track){
   var spl = track.split(/([\(\[\)\]]|\s-\s|feat\.|ft\.)/);
   var res = {
-    mainArtists: [],
-    featuredArtists: [],
-    songRemix: []
+    mainArtists: new Array(),
+    featuredArtists: new Array(),
+    songRemix: new Array()
   };
   res.mainArtists = res.mainArtists.concat( spl.shift().trim().split(` & `) );
   for(var i = 0; i < spl.length; ++i)
@@ -35,3 +35,4 @@ function parseTrack(track){
   }
   return res;
 }
+
