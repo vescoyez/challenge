@@ -40,3 +40,7 @@ label {
 .meta-list__item:first-child {
   border: none;
 }
+
+.meta-list__item--alert {
+  color: #d72b38;
+}
