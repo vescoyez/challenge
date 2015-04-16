@@ -1,46 +1,42 @@
 body {
   margin: 0;
+  background: #FFF;
+  font-family: sans-serif;
+  background: #F8F8F8;
 }
 
-.splash {
-    text-align: center;
-    margin: 10% 0 0 0;
-    box-sizing: border-box;
+core-toolbar {
+  background-color: #FFF;
+  height: 80px;
 }
 
-.splash .message {
-    font-size: 72px;
-    line-height: 72px;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
-    text-transform: uppercase;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+.content {
+  margin-top: 20px;
 }
 
-.splash .fa-spinner {
-    text-align: center;
-    display: inline-block;
-    font-size: 72px;
-    margin-top: 50px;
+label {
+  font-size: 10px;
+  padding: 4px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #BBB;
+  display: block;
 }
 
-.page-host {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50px;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+.meta-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #FFF;
+  border: 1px solid #e6e6e6;
 }
 
-section {
-    margin: 0 20px;
+.meta-list__item {
+  margin: 0;
+  padding: 10px 16px;
+  border-top: 1px solid #e6e6e6;
 }
 
-.navbar-nav li.loader {
-    margin: 12px 24px 0 6px;
-}
-
-.pictureDetail {
-    max-width: 425px;
+.meta-list__item:first-child {
+  border: none;
 }

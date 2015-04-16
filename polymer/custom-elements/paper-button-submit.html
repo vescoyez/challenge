@@ -6,9 +6,18 @@
         background: transparent;
         padding: 0;
         font-size: inherit;
+        margin: 10px;
+      }
+      
+      paper-button[raised].colored {
+        background: #4285f4;
+        color: #fff;
+      }
+      paper-button.colored {
+        color: #4285f4;
       }
     </style>
-    <paper-button raised>
+    <paper-button raised class="colored">
       <content></content>
     </paper-button>
   </template>

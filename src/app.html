@@ -1,31 +1,39 @@
 <template>
-  <core-header-panel flex mode="waterfall">
+  <core-header-panel flex>
     
     <core-toolbar>
-      <div>Challenge</div>
+      <paper-input-decorator label="Track" floatingLabel flex>
+        <input is="core-input" value.bind="track">
+      </paper-input-decorator>
     </core-toolbar>
 
-    <section>
+    <section class="content">
       <form role="form" submit.delegate="getTrackMeta()">
-        <paper-input-decorator label="Track" floatingLabel>
-          <input is="core-input" value.bind="track">
-        </paper-input-decorator>
         <div>
           <label>Main Artist(s)</label>
-          <p repeat.for="artist of trackMeta.mainArtists">${artist}</p>
-          <p if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</p>
+          <ul class="meta-list">
+            <li class="meta-list__item" repeat.for="artist of trackMeta.mainArtists">${artist}</li>
+            <li class="meta-list__item" if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</li>
+          <ul>
         </div>
         <div if.bind="trackMeta.featuredArtists[0]">
           <label>Featured Artist(s)</label>
-          <p repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</p>
+          <ul class="meta-list">
+            <li class="meta-list__item" repeat.for="featuredArtist of trackMeta.featuredArtists">${featuredArtist}</li>
+          </ul>
         </div>
         <div if.bind="trackMeta.songTitle">
           <label>Song Title</label>
-          <p>${trackMeta.songTitle}</p>
+          <ul class="meta-list">
+            <li class="meta-list__item">${trackMeta.songTitle}</li>
+            <li class="meta-list__item" if.bind="!trackMeta.songTitle">Song title is missing</li>
+          </ul>
         </div>
         <div if.bind="trackMeta.songRemix[0]">
           <label>Song Remix</label>
-          <p repeat.for="songRemix of trackMeta.songRemix">${songRemix}</p>
+          <ul class="meta-list">
+            <li class="meta-list__item" repeat.for="songRemix of trackMeta.songRemix">${songRemix}</li>
+          </ul>
         </div>
         <button type="submit" is="paper-button-submit">Add</button>
       </form>
