@@ -14,7 +14,7 @@
           <ul class="meta-list">
             <li if.bind="trackMeta.mainArtists[0]" class="meta-list__item" repeat.for="artist of trackMeta.mainArtists">${artist}</li>
             <li class="meta-list__item meta-list__item--alert" if.bind="!trackMeta.mainArtists[0]">Main Artist is missing</li>
-          <ul>
+          </ul>
         </div>
         <div if.bind="trackMeta.featuredArtists[0]">
           <label>Featured Artist${trackMeta.featuredArtists[1] ? 's' : ''}</label>
